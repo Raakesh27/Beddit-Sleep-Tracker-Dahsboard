@@ -1,0 +1,140 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery-1.8.3.js"></script>
+<script type="text/javascript">
+var myAjaxChart;
+var mydata = [];
+$(document).ready(function () {
+		$('#submit').click(function () {
+
+	var getData = function () {
+		var val1 = $('#firstname').val();
+		var val2 = $('#password').val();
+		var parameters = {firstname: val1, password: val2};
+		console.log("getData");
+
+		$.ajax({
+			type: 'GET',
+			url: 'http://localhost:8080/beddit',
+			crossDomain: true,
+			data: {
+				firstname: val1, password: val2
+			},
+			success: function (resp) {
+				alert('successfully posted' + resp);
+				heartRate(resp);
+			}
+
+		});
+
+
+	}
+    
+	var heartRate = function(){
+       // alert('inside heartRate ajax'+dataJson);
+        var val1 = $('#firstname').val();
+        var val2 = $('#password').val();
+		$.ajax({
+				url: 'http://localhost:8080/jmytest.js',
+				type: "GET",
+				data : {firstname: val1, password: val2},
+			crossDomain: true,
+				//dataType: 'json'
+			})
+			
+	}
+
+	
+    $('#submit').click(heartRate);
+  
+});
+function() {
+	    mydata = [];
+        requestData($(this).val());
+     });
+	
+	function requestData(data) {
+		$.ajax({
+				url: 'http://localhost:8080/beddit?firstname=mamidiravali1@gmail.com&password=ravaliraj'+data, // Node.js Server REST Call
+				type: "GET",
+				dataType: "json",
+				success: function(resp) {
+					var jsonobj = resp;
+					var obj = jQuery.parseJSON(jsonobj);
+					for(i=0;i<obj[0].heart_rate_curve.length;i++)
+					{
+						mydata.push(parseInt(obj[0].heart_rate_curve[i])); // Filling of Array after Ajax Call
+					}
+					// Initialising the Highchart Object within the success callback
+					//Chart
+					var options ={
+						chart: {
+						renderTo: 'container', // Initialising the DIV with Highchart Object
+						type: 'line',
+						marginRight: 130,
+						marginBottom: 25,
+					 },
+					 // Other Highchart Properties
+					 title: {
+					   text: 'Heart Rate',
+					   x: -20 //center
+					 },
+					 xAxis: {
+					 },
+					 yAxis: {
+						  title: {
+						  text: 'Time'
+					 },
+					 plotLines: [{
+						  value: 0,
+						  width: 1,
+						  color: '#808080'
+					}]
+				 },
+				 tooltip: {
+						 valueSuffix: 'heart rate'
+				 },
+				 legend: {
+					   layout: 'vertical',
+					   align: 'right',
+					   verticalAlign: 'top',
+					   x: -10,
+					   y: 100,
+					   borderWidth: 0
+				  }
+				  ,
+				  series: [{
+					   name: 'Time',
+					   data: mydata  // Here the previously populated javascript array will be initialised in data parameter
+				  }],
+				 };
+				 var chardata = new Highcharts.Chart(options);
+			   },
+			   cache: false
+
+		});
+	}
+	
+});
+
+
+</script>
+
+</head>
+<body>
+First name:<br>
+<input type="text" name="firstname" id="firstname">
+<br>
+Password:<br>
+<input type="password" name="password" id="password">
+<input type="submit" value="Submit" id="submit">
+
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="ajaxcall.js" type="application/javascript"></script>
+
+
+<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+</body>
+</html> 

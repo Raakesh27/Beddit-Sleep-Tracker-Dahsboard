@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>BEDDIT</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+	<link href="assets/css/light-bootstrap-custom.css" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="assets/css/demo.css" rel="stylesheet" />
+	<link href="assets/css/custom.css" rel="stylesheet" />
+
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar" data-color="azure" data-image="assets/img/sidebar-5.jpg">
+
+    <!--
+
+        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+        Tip 2: you can also add an image using data-image tag
+
+    -->
+
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="dashboard.html" class="simple-text">
+					<div class="beddit-img">
+						<img src="assets/img/beddit_logo.png" alt="BEDDIT"/>
+					</div>
+                </a>
+            </div>
+
+            <ul class="nav">
+				<li class="active">
+                    <a href="dashboard.html">
+                        <i class="pe-7s-graph"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+				 <li>
+                    <a href="user.html">
+                        <i class="pe-7s-user"></i>
+                        <p>User Profile</p>
+                    </a>
+				</li>
+                <li>
+                    <a href="thisweek.html">
+                        <i class="fa fa-bar-chart"></i>
+                        <p>This Week</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="people.html">
+                        <i class="fa fa-users"></i>
+                        <p>People In Your Group</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="achievements.html">
+                        <i class="fa fa-star"></i>
+                        <p>Achievements</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="sleepcoachingtips.html">
+                        <i class="fa fa-check-circle-o"></i>
+                        <p>Sleep Coaching Tips</p>
+                    </a>
+                </li>
+				<li>
+                    <a href="email.html">
+                        <i class="fa fa-envelope-o"></i>
+                        <p>Email</p>
+                    </a>
+                </li>
+            </ul>
+    	</div>
+    </div>
+
+    <div class="main-panel">
+        <nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Dashboard</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-dashboard"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-globe"></i>
+                                    <b class="caret"></b>
+                                    <span class="notification">5</span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Notification 1</a></li>
+                                <li><a href="#">Notification 2</a></li>
+                                <li><a href="#">Notification 3</a></li>
+                                <li><a href="#">Notification 4</a></li>
+                                <li><a href="#">Another notification</a></li>
+                              </ul>
+                        </li>
+                        <li>
+                           <a href="">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                           <a href="">
+                               Account
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    Dropdown
+                                    <b class="caret"></b>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                              </ul>
+                        </li>
+                        <li>
+                            <a href="log.html">
+                                Log out
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12"> 
+                        <div class="card">
+							<div class="jumbotron">
+								<div class="container">
+									<h2>Tips !!!</h2>
+									<p>Tips for improving your sleep...
+								</div>
+							</div>    
+                        </div>
+                    </div>
+				</div>
+	
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card">
+							<ul class="nav nav-tabs">
+							  <li role="presentation" class="active"><a href="#">SUNDAY</a></li>
+							  <li role="presentation"><a href="dash-mon.html">MONDAY</a></li>
+							  <li role="presentation"><a href="#">TUESDAY</a></li>
+							  <li role="presentation"><a href="#">WEDNESDAY</a></li>
+							  <li role="presentation"><a href="#">THURSDAY</a></li>
+							  <li role="presentation"><a href="#">FRIDAY</a></li>
+							  <li role="presentation"><a href="#">SATURDAY</a></li>
+							</ul>
+                            <div class="header">
+                                <h4 class="title">Sleep Score</h4>
+                                <p class="category"><---Date--></p>
+								
+								<div id="container2" style="width: 400px; height: 400px; margin: 0 auto">
+								</div>
+                            </div>
+							
+                            <div class="content">
+                                <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
+
+                                <div class="footer">
+                                    <div class="legend">
+                                        <i class="fa fa-circle text-info"></i> Open
+                                        <i class="fa fa-circle text-danger"></i> Bounce
+                                        <i class="fa fa-circle text-warning"></i> Unsubscribe
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+				</div>
+					
+				<div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+							<div class="header">
+                                <h4 class="title">Sleep Statistics</h4>
+                                <p class="category">Deep Sleep Graph</p>
+								
+								<div id="container" style="height: 400px; min-width: 310px">
+	
+								</div>
+								
+								
+								
+                            </div>
+                            <div class="content">
+                                <div id="chartHours" class="ct-chart"></div>
+                                <div class="footer">
+                                    <div class="legend">
+                                        <i class="fa fa-circle text-info"></i> Open
+                                        <i class="fa fa-circle text-danger"></i> Click
+                                        <i class="fa fa-circle text-warning"></i> Click Second Time
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+				<div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+								<div class="container">
+									<h2>Sleep recommendations</h2>
+									<h3>You are 23 years old</h3>
+									<div class="panel panel-default">
+										<div class="panel panel-danger">+11h</div>
+											<div class="panel-body">
+												Sleeping over 11 hours per night is not recommended for your age group and sleep experts agree that it may not be conductive to your health. 
+												Sleep durations exceeding the normal range can be a sign that you’re restricting your sleep during other nights or (if it occurs regularly) 
+												it may be a sign of serious health problems, that you should consult your doctor on.
+											</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel panel-info">9-11h</div>
+											<div class="panel-body">
+												This may be a good amount of sleep for you, although it exceeds the general sleep expert recommendation of 7-9 hours per night for your age group.
+												Sleep needs vary by individual. If you want improve your recovery during sleep, you should focus on sleep quality and timing of sleep during the day (including sleep regularity)
+												instead of increasing duration of sleep.
+											</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel panel-success">7-9h</div>
+											<div class="panel-body">
+												This is the recommended amount of sleep for your age group (the normal range is 7-9 hours).
+												Which is very good since sleep, like diet and exercise, is a vital part of physical, cognitive, and emotional health.
+											</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel panel-info">6-7h</div>
+											<div class="panel-body">
+												This amount of sleep may be enough for some. The sleep recommendation for your age group is 7-9 hours per night,
+												but if you feel well rested physically and mentally after regularly sleeping only 6-7 hours, this is probably enough for you.
+											</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel panel-danger"><6h</div>
+											<div class="panel-body">
+												Sleeping less than 6 hours per night is not recommended. The sleep recommendation for your age group is 7 to 9 hours per night. 
+												Amount of sleep is the biggest factor affecting your recovery and how well rested you feel after a night’s sleep.
+												Restricting your sleep over a prolonged period of time can compromise your health.
+											</div>
+									</div>
+								</div>
+							</div>    
+                    </div>
+				</div>
+				
+				
+			</div>	    
+        </div>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                            <a href="http://www.beddit.com">
+									Home	
+                            </a>
+                        </li>
+						<li>
+                            <a href="http://www.beddit.com/features/">
+                                Product
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.beddit.com/buy/">
+                                Buy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.beddit.com/company/">
+                               Company
+                            </a>
+                        </li>
+						<li>
+                            <a href="http://www.beddit.com/blog/">
+                               Blog
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="copyright pull-right">
+                    &copy; 2016 Web Information System
+                </p>
+            </div>
+        </footer>
+
+    </div>
+</div>
+
+
+</body>
+
+    <!--   Core JS Files   -->
+    <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<!--  Checkbox, Radio & Switch Plugins -->
+	<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
+
+	<!--  Charts Plugin -->
+	<script src="./assets/js/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="assets/js/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+	<script src="assets/js/light-bootstrap-dashboard.js"></script>
+
+	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+	<script src="assets/js/demo.js"></script>
+
+	<!-- my javascript code-->
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/highcharts-more.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="test1.js"></script>
+	<script src="sleepmeter.js"></script>
+	
+	<!--<script type="text/javascript">
+	
+	$(function () {
+    $('#container').highcharts({
+        title: {
+            text: 'Sleep Curve',
+            x: -20 //center
+        },
+        xAxis: {
+            categories: ['1.00am', '2.00am', '3.00am', '4.00am', '5.00am', '6.00am',
+                '7.00am', '8.00am', '9.00am', '10.00am', '11.00am', '12.00pm']
+        },
+        yAxis: {
+            title: {
+                
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: ''
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'BPM',
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+        }, {
+            name: 'Sleep',
+            data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+        }]
+    });
+});
+	
+	</script>-->
+
+</html>

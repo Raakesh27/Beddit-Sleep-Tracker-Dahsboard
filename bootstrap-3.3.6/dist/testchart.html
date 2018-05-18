@@ -1,0 +1,84 @@
+<html>
+     <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />       
+     <title>Test Dash</title>
+     </head>
+     <body>
+
+     
+
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+     <script>window.jQuery || document.write('<script src="js/jquery-1.8.3.min.js"><\/script>')</script>
+     <script src="http://code.highcharts.com/highcharts.js"></script>
+     <script src="http://code.highcharts.com/highcharts-more.js"></script>
+     <script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+	 
+	 <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"><h1>HIGH CHARTS</h1></div>
+     <script>
+     //My highchart script
+
+     $(function () {
+        var chart;
+        $(document).ready(function() {
+            // $.getJSON("data.php", function(json) {
+
+                chart = new Highcharts.Chart({
+                    chart: {
+                        renderTo: 'container',
+                        type: 'line',
+                        marginRight: 130,
+                        marginBottom: 25
+                    },
+                    title: {
+                        text: 'Disease',
+                        x: -20 //center
+                    },
+                    subtitle: {
+                        text: '',
+                        x: -20
+                    },
+                    xAxis: {
+                        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                    },
+                    yAxis: {
+                        title: {
+                            text: 'Patient Count'
+                        },
+                        plotLines: [{
+                            value: 0,
+                            width: 1,
+                            color: '#808080'
+                        }]
+                    },
+                    tooltip: {
+                        formatter: function() {
+                                return '<b>'+ this.series.name +'</b><br/>'+
+                                this.x +': '+ this.y;
+                        }
+                    },
+                    legend: {
+                        layout: 'vertical',
+                        align: 'right',
+                        verticalAlign: 'top',
+                        x: -10,
+                        y: 100,
+                        borderWidth: 0
+                    },
+                    series: [{
+                        name: 'Jane',
+                        data: [1, 0, 4]
+                    }, {
+                        name: 'John',
+                        data: [5, 7, 3]
+                    }]
+                });
+        //  });
+
+        });
+
+     });
+
+     </script>
+	 
+ </body>
